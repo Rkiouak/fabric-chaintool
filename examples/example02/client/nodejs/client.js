@@ -87,8 +87,8 @@ function connect() {
                 username: config.identity.principal,
                 mspid: config.identity.mspid,
                 cryptoContent: {
-                    privateKeyPEM: config.identity.privatekey,
-                    signedCertPEM: config.identity.certificate
+                    privateKeyPEM: config.identity.tlsprivatekey,
+                    signedCertPEM: config.identity.tlscertificate
                 }};
             return client.createUser(userSpec);
         })
